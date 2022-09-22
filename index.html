@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <title>Car Value Prediction</title>
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class="heading_font">Car Resale Value Prediction</span></h2>
+            <div class='description'>
+    			<p>Fill out the following attributes to get the current value of your Car</p>
+    		</div>
+    	</div>
+        <h3 style="font-style: italic;">{{ prediction_text }}</h3>
+        <!-- File Input -->
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict')}}" method="post">
+                
+                <div class='container-input'>
+                    <div class='label'>Year</div>
+                    <input id="first" class="input" name="Year" type="number ">
+                </div>
+                <br>
+                <div>
+                    <div class='label'>What is the Showroom Price?(In lakhs)</div>
+                    <input id="second" class="input" name="Current_Price" required="required">
+                </div>
+                <br>
+                <div>
+                    <div class='label'>How Many Kilometers Drived?</div><input id="third" class="input" name="Dist_Driven" required="required">
+                </div>
+                <br>
+                <div>
+                    <div class='label'>How much owners previously had the car(0 or 1 or 3) ?</div>
+                    <input id="fourth" class="input" name="Owner" required="required">
+                </div>
+                <br>
+                <div>
+                    <div class='label'>What Is the Fuel type?</div>
+                    <select name="Fuel_Type_Petrol" class="input" id="fuel" required="required">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Diesel">CNG</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <div class='label'>Are you A Dealer or Individual</div>
+                    <select class="input" name="Seller_Type_Individual" id="resea" required="required">
+                        <option value="Dealer">Dealer</option>
+                        <option value="Individual">Individual</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <div class='label'>Transmission type</div>
+                    <select class="input" name="Transmission_Mannual" id="research" required="required">
+                        <option value="Mannual">Manual Car</option>
+                        <option value="Automatic">Automatic Car</option>
+                    </select>
+                </div><br>
+                <button id="sub" type="submit" class="my-cta-button">Calculate the Selling Price</button>
+            </form>
+            
+    	</div>
+        <!-- Footer -->
+        <div class='footer'>
+            <p class='footer-description'>Made by akash.</p>
+        </div>
+
+    </body>
+</html>
