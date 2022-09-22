@@ -1,6 +1,6 @@
 # Car-Value-Prediction
 
-![Python 3.7](https://img.shields.io/badge/Pyhton-3.7-blue) ![Flask](https://img.shields.io/badge/Flask-1.1-orange) ![Heroku](https://img.shields.io/badge/Heroku-Deployment-brightgreen)
+
 
 ## Objective
 
@@ -8,16 +8,13 @@ The objective of this project is to calculate the <strong>resale value of a car<
 
 ## Live Demo
 
-<a href="https://carvaluepred.herokuapp.com/">Car Value Prediction</a>
 
   ### Glimpse of the Web App
   <br>
 
-  ![GIF](carvaluepred.gif)
-
+  
 ## Installation
-The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after [cloning](https://www.howtogeek.com/451360/how-to-clone-a-github-repository/) the repository:
-```bash
+The Code is written in Python 3.7. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the ```bash
 pip install -r requirements.txt
 ```
 
